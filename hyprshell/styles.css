@@ -1,0 +1,177 @@
+@import "../../.cache/cwal/colors-waybar.css";
+:root {
+    font-family: "Terminess Nerd Font", "Terminus", "terminus-font", "monospace";
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 0px 1px @background;
+    color: @color15;
+}
+
+.window {
+    background-color: @color3;
+    border: 2px solid @background;
+    border-radius: 5px;
+    padding: 2px;
+    box-shadow: 
+        inset 2px 2px 0px 0px rgba(255, 255, 255, 0.2),
+        inset -2px -2px 0px 0px rgba(0, 0, 0, 0.2),
+        3px 3px 0px 0px rgba(0, 0, 0, 0.0);
+}
+
+.monitor {
+    background-color: @color3;
+    border: 0;
+}
+
+.workspace {
+    padding: 0;
+    background-color: @color3;
+    border: 2px solid @background;
+}
+
+.workspace label{
+    font-family: "Terminess Nerd Font", "Terminus", "terminus-font", "monospace";
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: none;
+    color: @color15;
+}
+
+.client {
+    font-family: "Terminess Nerd Font", "Terminus", "terminus-font", "monospace";
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 0px 1px @background;
+    margin: 4px 2px;
+    padding:0 4px;
+    background-color: @color1;
+    border: 2px solid @background;
+    border-radius: 5px;
+    box-shadow:
+        inset 2px 2px 0px 0px rgba(255, 255, 255, 0.2),
+        inset -2px -2px 0px 0px rgba(0, 0, 0, 0.2),
+        3px 3px 0px 0px rgba(0, 0, 0, 0.0);
+}
+
+.client:hover {
+    background-color: @color8;
+    text-shadow: none;
+}
+
+.client.active {
+    background-color: @color13;
+    text-shadow: none;
+    box-shadow:
+        inset -2px -2px 0px 0px rgba(255, 255, 255, 0.2), 
+        inset 2px 2px 0px 0px rgba(0, 0, 0, 0.4),
+        3px 3px 0px 0px rgba(0, 0, 0, 0.0);
+}
+
+.client label {
+    color: @color15;
+}
+
+.client.active label {
+    color: @background;
+}
+
+.client:hover label {
+    color: @color14;;
+}
+
+.client-image {
+}
+
+
+.launcher {
+    background-color: @color3;
+    border: 0;
+}
+
+.launcher-input {
+    margin: 10px 10px;
+    padding: 4px 6px;
+    background-color: @color2;
+    color: @foreground;
+    border: 2px solid #11111b;
+    border-radius: 5px;
+}
+
+.launcher-results {
+}
+
+.launcher-item {
+    font-family: "Terminess Nerd Font", "Terminus", "terminus-font", "monospace";
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 0px 1px @background;
+    color: @color15;
+    margin: 4px 2px;
+    padding:4px 4px;
+    background-color: @color1;
+    border: 2px solid @background;
+    border-radius: 5px;
+    box-shadow:
+        inset 2px 2px 0px 0px rgba(255, 255, 255, 0.2),
+        inset -2px -2px 0px 0px rgba(0, 0, 0, 0.2),
+        3px 3px 0px 0px rgba(0, 0, 0, 0.0);
+}
+
+.launcher-item.selected {
+    background-color: @color13;
+    color: @background;
+    box-shadow: 
+        inset -2px -2px 0px 0px rgba(255, 255, 255, 0.2), 
+        inset 2px 2px 0px 0px rgba(0, 0, 0, 0.4),
+        1px 1px 0px 0px #11111b;
+    text-shadow: none;
+}
+
+.launcher-item:hover {
+    background-color: @color8;
+}
+
+.launcher-item:hover label{
+    color: @color14;
+    text-shadow: none;
+}
+
+.launcher-exec {
+    font-family: "Terminess Nerd Font", "Terminus", "terminus-font", "monospace";
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 0px 1px @background;
+    color: @color14;
+}
+
+.launcher-key {
+    font-family: "Terminess Nerd Font", "Terminus", "terminus-font", "monospace";
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 0px 1px @background;
+    color: @color13;
+    padding-right: 2px;
+}
+
+.launcher-plugins {
+}
+
+.launcher-plugin {
+    font-family: "Terminess Nerd Font", "Terminus", "terminus-font", "monospace";
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 0px 1px @background;
+    color: @color15;
+    margin: 4px 2px;
+    padding:4px 4px;
+    background-color: @color1;
+    border: 2px solid @background;
+    border-radius: 5px;
+    box-shadow:
+        inset 2px 2px 0px 0px rgba(255, 255, 255, 0.2),
+        inset -2px -2px 0px 0px rgba(0, 0, 0, 0.2),
+        3px 3px 0px 0px rgba(0, 0, 0, 0.0);
+}
+.launcher-plugin:hover {
+    background-color: @color8;
+}

@@ -1,0 +1,69 @@
+
+@import "/home/john/.cache/cwal/colors-waybar.css";
+
+* {
+    font-family: "Terminess Nerd Font", monospace;
+    font-size: 16px;
+    border-radius: 0;
+    border: none;
+    font-weight: bold;
+    text-shadow: 0px 1px @background;
+}
+
+window {
+    margin: 4px 2px;
+    padding: 4px 6px;
+    color: @color15;
+    background-color: @color3;
+    border: 2px solid @background;
+    border-radius: 5px;
+    box-shadow: 
+        inset 2px 2px 0px 0px rgba(255, 255, 255, 0.2),
+        inset -2px -2px 0px 0px rgba(0, 0, 0, 0.2),
+        3px 3px 0px 0px rgba(0, 0, 0, 0.0);
+}
+
+#input {
+    margin: 10px 10px;
+    padding: 4px 6px;
+    background-color: @color2;
+    color: @foreground;
+    border: 2px solid #11111b;
+    border-radius: 5px;
+}
+
+#inner-box {
+    margin: 0 10px;
+    padding-top: 8px;
+}
+#scroll {
+    margin-bottom: 10px;
+}
+
+#entry {
+    margin: 4px 2px;
+    padding: 10px 10px;
+    color: @foreground;
+    background-color: @color1; 
+    border: 2px solid @background;
+    border-radius: 5px;
+    box-shadow: 
+        inset 2px 2px 0px 0px rgba(255, 255, 255, 0.2),
+        inset -2px -2px 0px 0px rgba(0, 0, 0, 0.2),
+        3px 3px 0px 0px rgba(0, 0, 0, 0.0);
+}
+
+#entry:selected {
+    background-color: @color13;
+    color: @background;
+    font-weight:normal:
+    box-shadow: 
+        inset -2px -2px 0px 0px rgba(255, 255, 255, 0.2), 
+        inset 2px 2px 0px 0px rgba(0, 0, 0, 0.4),
+        1px 1px 0px 0px #11111b;
+    text-shadow: none;
+}
+
+#text:selected {
+    color: @background;
+}

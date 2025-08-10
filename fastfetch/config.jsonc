@@ -1,0 +1,134 @@
+// ~/.config/fastfetch/config.jsonc
+// See https://github.com/fastfetch-cli/fastfetch/wiki/Configuration for more details
+// See *.jsonc in https://github.com/fastfetch-cli/fastfetch/tree/dev/presets/examples for more examples
+{
+	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+	"logo": {
+		"source": "~/.config/fastfetch/ascii.txt",
+		"padding": {
+			"top": 0
+		},
+    "color": {
+        "1": "red",
+        "2": "white"
+        }
+	},
+    "display": {
+        "separator": " \u001b[91m󰨃 "
+    },
+    "modules": [
+        {
+            "type": "custom",
+            "keyColor": "white",
+            "format": "╭────────────────────────────────────────────────────────────╮"
+        },
+        {
+            "type": "os",
+            "key": " OS",
+            "keyColor": "red"
+        },
+        {
+            "type": "kernel",
+            "key": "│ \u001b[91m├",
+            "keyColor": "white"
+        },
+        {
+            "type": "packages",
+            "key": "│ \u001b[91m├",
+            "keyColor": "white"
+        },
+        {
+            "type": "shell",
+            "key": "│ \u001b[91m└",
+            "keyColor": "white"
+        },
+        {
+            "type": "de",
+            "key": "󰇄 DE",
+            "keyColor": "red"
+        },
+        {
+            "type": "wm",
+            "key": "│ \u001b[91m├",
+            "keyColor": "white"
+        },
+        {
+            "type": "theme",
+            "key": "│ \u001b[91m├󰧨",
+            "keyColor": "white"
+        },
+        {
+            "type": "font",
+            "key": "│ \u001b[91m├",
+            "keyColor": "white"
+        },
+        {
+            "type": "icons",
+            "key": "│ \u001b[91m├",
+            "keyColor": "white"
+        },
+        {
+            "type": "cursor",
+            "key": "│ \u001b[91m├",
+            "keyColor": "white"
+        },
+        {
+            "type": "terminal",
+            "key": "│ \u001b[91m├",
+            "keyColor": "white"
+        },
+        {
+            "type": "terminalfont",
+            "key": "│ \u001b[91m├",
+            "keyColor": "white"
+        },
+        {
+            "type": "wallpaper",
+            "key": "│ \u001b[91m└󰸉",
+            "keyColor": "white"
+        },
+        {
+            "type": "host",
+            "key": "󰟀 PC",
+            "keyColor": "red"
+        },
+        {
+            "type": "cpu",
+            "key": "│ \u001b[91m├",
+            "keyColor": "white"
+        },
+        {
+            "type": "gpu",
+            "key": "│ \u001b[91m├ ",
+            "keyColor": "white"
+        },
+        {
+            "type": "memory",
+            "key": "│ \u001b[91m├󰑭",
+            "keyColor": "white"
+        },
+        {
+            "type": "uptime",
+            "key": "│ \u001b[91m└󰅐",
+            "keyColor": "white"
+        },
+        {
+            "type": "player",
+            "key": " SND",
+            "keyColor": "red"
+        },
+        {
+            "type": "media",
+            "key": "│ \u001b[91m└󰝚",
+            "keyColor": "white"
+        },
+        {
+            "type": "custom",
+            "keyColor": "white",
+            "format": "╰────────────────────────────────────────────────────────────╯"
+        },
+        {
+            "type": "colors",
+        },
+    ]
+}

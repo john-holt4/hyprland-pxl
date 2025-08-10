@@ -1,0 +1,239 @@
+[
+  {
+    "layer": "top",
+    "position": "top",
+    "modules-left": [
+      "power-profiles-daemon",
+      "custom/spotify",
+      "cava"
+    ],
+    "modules-center": [
+      "hyprland/workspaces"
+    ],
+    "modules-right": [
+      "cpu",
+      "memory",
+      "custom/hyprsunset",
+      "clock"
+    ],
+    "custom/spotify": {
+        "format": "{}",
+        "return-type": "json",
+        "exec": "spotifatius monitor",
+        "on-click": "kitty spotify"
+    },
+    "cava": {
+        "bars": 8,
+        "framerate": 30,
+        "monstercat": true,
+        "autosense": true,
+        "waves": true,
+        "hide_on_silence": true,
+        "reverse": true,
+        "noise_reduction": 0,
+        "sleep_timer": 1,
+        "bar_delimiter": 0,
+        "input_delay": 1,
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+        "on-click": "playerctl play-pause"
+    },
+    "power-profiles-daemon": {
+      "format": "{icon}  {profile}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": false,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+    },
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "format-icons": {
+          "1": "一",
+          "2": "二",
+          "3": "三",
+          "4": "四",
+          "5": "五",
+          "6": "六",
+          "7": "七",
+          "8": "八",
+          "9": "九",
+          "10": "十",
+          "11": "一",
+          "12": "二",
+          "13": "三",
+          "14": "四",
+          "15": "五",
+          "16": "六",
+          "17": "七",
+          "18": "八",
+          "19": "九",
+          "20": "十",
+          "urgent": "零",
+          "default": "〇"
+      },
+      "persistent-workspaces": {
+          "*": 10
+      }
+    },
+    "cpu": {
+      "format": "  {usage}%",
+      "on-click": "kitty btop"
+    },
+    "memory": {
+      "format": "  {}%",
+      "tooltip-format": "{used:0.1f}G/{total:0.1f}G",
+      "on-click": "kitty btop"
+    },
+    "custom/hyprsunset": {
+        "format": "{}", // This tells Waybar to use the JSON output from the script directly
+        "exec": "~/.config/waybar/scripts/hyprsunset-toggle.sh",
+        "on-click": "~/.config/waybar/scripts/hyprsunset-toggle.sh --toggle &",
+        "return-type": "json",
+        "interval": 5 // Check status every 5 seconds
+    },
+    "clock": {
+      "format": "  {:%a %B %d  󰥔  %I:%M %p}",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    }
+  },
+  {
+    "layer": "top",
+    "position": "bottom",
+    "reload_style_on_change": true,
+    "modules-left": [
+      "custom/start",
+      "custom/power"
+    ],
+    "modules-center": [
+      "wlr/taskbar"
+    ],
+    "modules-right":[
+      "group/backlight",
+      "group/pulseaudio",
+      "bluetooth",
+      "battery",
+      "tray",
+      "custom/pacman"
+    ],
+    "custom/start": {
+        "format": "{icon}",
+        "tooltip": false,
+        "on-click": "wofi --show drun -b -y 478 -x 5",
+        "format-icons": [
+            "APPS"
+        ]
+    },
+     "custom/power": {
+        "format": "󰐥",
+        "tooltip": false,
+        "on-click": "~/.config/waybar/powermenu.sh"
+    },
+    "wlr/taskbar": {
+      "all-outputs": false,
+      "format": "{icon} {name}",
+      "tooltip-format": "",
+      "ignore-list": [],
+      "on-click": "activate"
+    },
+    "group/backlight": {
+      "orientation": "inherit",
+      "drawer": {
+        "transition-duration": 500,
+      },
+      "modules": [
+      "backlight",
+      "backlight/slider"
+      ]
+    },
+    "group/pulseaudio": {
+      "orientation": "inherit",
+      "drawer": {
+        "transition-duration": 500,
+      },
+      "modules": [
+      "pulseaudio",
+      "pulseaudio/slider"
+      ]
+    },
+    "backlight": {
+    "scroll-step": 5,
+    "format": "{icon}",
+    "format-alt": "{icon} {percent}",
+    "format-icons": [
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ]
+  },
+    "backlight/slider": {
+        "min": 5,
+        "max": 100,
+        "orientation": "horizontal"
+    },
+    "pulseaudio": {
+      "scroll-step": 5,
+      "format": "{icon} ",
+      "format-bluetooth": "{icon} ",
+      "format-bluetooth-muted": "󰝟 ",
+      "format-muted": " 󰝟 ",
+      "format-icons": {
+        "default": [
+          "",
+          "",
+          ""
+        ]
+      },
+      "on-click": "pavucontrol",
+    },
+    "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
+    },
+    "bluetooth": {
+      "format": "",
+      "format-disabled": "󰂲",
+      "format-connected": "",
+      "tooltip-format": "{controller_alias}\t{controller_address}",
+      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+      "on-click": "blueberry"
+    },
+    "battery": {
+      "states": {
+        "warning": 30,
+        "critical": 15
+      },
+      "format": "{icon}  ",
+      "format-charging": " ",
+      "format-plugged": " ",
+      "format-alt": "{icon}  {capacity}% ",
+      "format-icons": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "tray": {
+        "spacing": 8,
+        "icon-size": 22
+    },
+
+    "custom/pacman": {
+      "format": "{icon}{0}",
+      "return-type": "json",
+      "format-icons": {
+        "pending-updates": " ",
+        "updated": ""
+      },
+      "exec-if": "ping -c 1 8.8.8.8",
+      "exec": "waybar-updates",
+      "on-click": "kitty paru"
+    }
+  }
+]

@@ -1,0 +1,225 @@
+@import "../../.cache/cwal/colors-waybar.css";
+
+* {
+    font-family: "Terminess Nerd Font", "Terminus", "terminus-font", "monospace";
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 0px 1px @background;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    color: @color15;
+    margin: 4px;
+    padding: 1px 4px;
+    background-color: @color3;
+    border: 2px solid @background;
+    border-radius: 5px;
+    box-shadow: 
+        inset 2px 2px 0px 0px rgba(255, 255, 255, 0.2),
+        inset -2px -2px 0px 0px rgba(0, 0, 0, 0.2),
+        3px 3px 0px 0px rgba(0, 0, 0, 0.0);
+}
+#cava,
+#custom-spotify,
+#power-profiles-daemon,
+#cpu,
+#memory,
+#custom-hyprsunset,
+#clock {
+    color: @color15;
+    margin: 4px 2px;
+    padding:0 6px;
+    background-color: @color2;
+    border: 2px solid @background;
+    border-radius: 5px;
+    box-shadow:
+        inset 2px 2px 0px 0px rgba(255, 255, 255, 0.2),
+        inset -2px -2px 0px 0px rgba(0, 0, 0, 0.2),
+        3px 3px 0px 0px rgba(0, 0, 0, 0.0);
+}
+
+#taskbar button,
+#workspaces button,
+#custom-start,
+#custom-power {
+    color: @color15;
+    margin: 4px 2px;
+    padding:0 4px;
+    background-color: @color1;
+    border: 2px solid @background;
+    border-radius: 5px;
+    box-shadow:
+        inset 2px 2px 0px 0px rgba(255, 255, 255, 0.2),
+        inset -2px -2px 0px 0px rgba(0, 0, 0, 0.2),
+        3px 3px 0px 0px rgba(0, 0, 0, 0.0);
+}
+
+#workspaces button:hover, 
+#custom-power:hover,
+#custom-start:hover,
+#taskbar button:hover {
+    background-color: @color8;
+    color: @color14;
+}
+
+#power-profiles-daemon:hover,
+#cpu:hover,
+#memory:hover,
+#custom-spotify:hover,
+#custom-hyprsunset:hover,
+#cava:hover {
+    background-color: @color8;
+    color: @color14;
+}
+
+#workspaces button.active,
+#taskbar button.active {
+    background-color: @color13;
+    color: @background;
+    box-shadow:
+        inset -2px -2px 0px 0px rgba(255, 255, 255, 0.2), 
+        inset 2px 2px 0px 0px rgba(0, 0, 0, 0.4),
+        3px 3px 0px 0px rgba(0, 0, 0, 0.0);
+}
+#workspaces button.active *,
+#taskbar button.active *,
+#workspaces button:hover *,
+#taskbar button:hover *,
+#workspaces button.urgent * {
+    text-shadow: none;
+}
+
+#workspaces button.urgent {
+    background-color: @color10;
+    color: @background;
+}
+
+#custom-start {
+    padding: 0 5px;
+    color: @color13;
+    background-color: @color2;
+}
+#custom-start:hover {
+    color: @color14;
+    background-color:  @color10;
+}
+#power-profiles-daemon {
+    padding-left: 4px;
+}
+#custom-power {
+    padding: 0 10px 0 8px;
+    color: @color14;
+    background-color: @color4;
+}
+#custom-power:hover {
+    color: @color13;
+    background-color:  @color12;
+}
+
+#battery {
+    text-shadow: none;
+    padding-left:10px;
+}
+
+#tray {
+    padding-right:4px;
+    padding-left: 2px;
+}
+
+#bluetooth {
+    text-shadow: none;
+    padding-left: 4px;
+}
+
+
+#battery.warning {
+    color: @color14;
+}
+
+#battery.critical {
+    color: @color9;
+}
+
+#backlight {
+    text-shadow: none;
+    padding-left:0px;
+    padding-right: 4px;
+    color: @foreground;
+    border: 2px solid transparent;
+}
+
+#backlight-slider slider {
+    border: 1px @background solid;
+    border-radius: 4px;
+    background-color: @foreground;
+    box-shadow:
+    inset 2px 2px 0px 0px rgba(255, 255, 255, 0.2),
+    inset -2px -2px 0px 0px rgba(0, 0, 0, 0.2),
+    3px 3px 0px 0px rgba(0, 0, 0, 0.0);
+}
+
+#backlight-slider trough {
+    min-height: 10px;
+    min-width: 100px;
+    border-radius: 4px;
+    border: 1px @background solid;
+    background-color: @color7;
+}
+
+#backlight-slider highlight {
+    background-color: @color13;
+}
+
+#pulseaudio {
+    text-shadow: none;
+    color: @foreground;
+    padding-right: 0px;
+    border: 2px solid transparent;
+}
+
+#pulseaudio-slider slider {
+    border: 1px @background solid;
+    border-radius: 4px;
+    background-color: @foreground;
+    box-shadow:
+    inset 2px 2px 0px 0px rgba(255, 255, 255, 0.2),
+    inset -2px -2px 0px 0px rgba(0, 0, 0, 0.2),
+    3px 3px 0px 0px rgba(0, 0, 0, 0.0);
+}
+
+#pulseaudio-slider trough {
+    min-height: 10px;
+    min-width: 100px;
+    border-radius: 4px;
+    border: 1px @background solid;
+    background-color: @color7;
+}
+
+#pulseaudio-slider highlight {
+    background-color: @color13;
+}
+
+@keyframes blink-update {
+	to {
+		background-color: dodgerblue;
+	}
+}
+
+#custom-pacman {
+    text-shadow: none;
+    padding-right: 10px;
+    padding-left: 2px;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+#custom-pacman.pending-updates {
+    background-color: transparent;
+}

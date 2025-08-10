@@ -1,0 +1,38 @@
+#
+# Mako theme with a retro, pixelated theme 
+# to match the Waybar, Hyprland, Kitty, and Starship configs.
+#
+# Save this file as `config` in ~/.config/mako/
+#
+# -- General Appearance --
+font=Terminess Nerd Font Bold 12
+background-color=#031e0b
+text-color=#ccd2ce
+border-color=#306a44
+
+
+# -- Sizing and Spacing --
+width=350
+margin=15
+padding=10
+border-size=2
+border-radius=4
+
+# -- Style --
+default-timeout=5000
+max-visible=5
+
+# -- Style based on Urgency --
+# Use the candy colors for different notification types.
+
+[urgency=low]
+# Candy Blue
+default-timeout=3000
+
+[urgency=normal]
+# Minty Green
+
+[urgency=high]
+
+# Makes high-urgency notifications sticky
+default-timeout=0
